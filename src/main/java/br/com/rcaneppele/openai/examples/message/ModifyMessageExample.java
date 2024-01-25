@@ -17,7 +17,7 @@ public class ModifyMessageExample {
 
         var message = client.modifyMessage("thread_id", "message_id", request);
 
-        System.out.println("id: " +message.id());
+        System.out.println("Id: " +message.id());
         System.out.println("Object: " +message.object());
         System.out.println("Created at: " +message.createdAt());
         System.out.println("Role: " +message.role());

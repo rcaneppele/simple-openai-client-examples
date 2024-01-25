@@ -22,7 +22,7 @@ public class ListAssistantsExample {
 
         System.out.println("\n===== ASSISTANTS =====\n");
         listOfAssistants.data().forEach(assistant -> {
-            System.out.println("Response ID: " +assistant.id());
+            System.out.println("Id: " +assistant.id());
             System.out.println("Object: " +assistant.object());
             System.out.println("Created at: " +assistant.createdAt());
             System.out.println("Model: " +assistant.model());

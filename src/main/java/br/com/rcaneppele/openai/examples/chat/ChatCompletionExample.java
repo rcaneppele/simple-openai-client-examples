@@ -20,21 +20,21 @@ public class ChatCompletionExample {
                 .temperature(1.2)
                 .build();
 
-        var response = client.chatCompletion(request);
+        var chatCompletion = client.chatCompletion(request);
 
-        System.out.println("Response ID: " +response.id());
-        System.out.println("Fingerprint: " +response.systemFingerprint());
-        System.out.println("Object: " +response.object());
-        System.out.println("Created: " +response.created());
-        System.out.println("Usage: " +response.usage());
+        System.out.println("Id: " +chatCompletion.id());
+        System.out.println("Fingerprint: " +chatCompletion.systemFingerprint());
+        System.out.println("Object: " +chatCompletion.object());
+        System.out.println("Created: " +chatCompletion.created());
+        System.out.println("Usage: " +chatCompletion.usage());
 
         System.out.println("\n===== RESPONSE CHOICES =====\n");
-        response.choices().forEach(c -> {
+        chatCompletion.choices().forEach(c -> {
             System.out.println("Index: " +c.index());
             System.out.println("Message Role: " +c.message().role());
             System.out.println("Message Content: " +c.messageContent());
             System.out.println("Finish Reason: " +c.finishReason());
-            System.out.println("LogProbability: " +c.logProbs());
+            System.out.println("Log Probability: " +c.logProbs());
             System.out.println("-------------------------");
         });
     }

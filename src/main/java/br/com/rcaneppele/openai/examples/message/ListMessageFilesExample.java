@@ -22,7 +22,7 @@ public class ListMessageFilesExample {
 
         System.out.println("\n===== MESSAGE FILES =====\n");
         listOfMessageFiles.data().forEach(file -> {
-            System.out.println("id: " +file.id());
+            System.out.println("Id: " +file.id());
             System.out.println("Object: " +file.object());
             System.out.println("Created at: " +file.createdAt());
             System.out.println("Message id: " +file.messageId());

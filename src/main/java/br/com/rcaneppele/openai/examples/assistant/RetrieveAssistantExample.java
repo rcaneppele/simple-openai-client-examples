@@ -12,7 +12,7 @@ public class RetrieveAssistantExample {
         try {
             var assistant = client.retrieveAssistant("asst_xxxxxxxxxxxxxxxxxxxxxxxx");
 
-            System.out.println("Response ID: " +assistant.id());
+            System.out.println("Id: " +assistant.id());
             System.out.println("Object: " +assistant.object());
             System.out.println("Created at: " +assistant.createdAt());
             System.out.println("Model: " +assistant.model());
@@ -23,7 +23,7 @@ public class RetrieveAssistantExample {
             System.out.println("Metadata: " +assistant.metadata());
             System.out.println("Tools: " +assistant.tools());
         } catch (NotFoundException e) {
-            System.out.println("Assistant not found with given id");
+            System.out.println(e.getMessage());
         }
     }
 

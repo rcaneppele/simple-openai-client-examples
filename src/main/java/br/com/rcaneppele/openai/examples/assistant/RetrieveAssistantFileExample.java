@@ -12,7 +12,7 @@ public class RetrieveAssistantFileExample {
         try {
             var file = client.retrieveAssistantFile("asst_id", "file-id");
 
-            System.out.println("File id: " +file.id());
+            System.out.println("Id: " +file.id());
             System.out.println("Object: " +file.object());
             System.out.println("Created at: " +file.createdAt());
             System.out.println("Assistant id: " +file.assistantId());

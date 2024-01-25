@@ -18,7 +18,7 @@ public class ModifyAssistantExample {
 
         var assistant = client.modifyAssistant("asst_vUT0OWmD2jrAgf4vTeZpWVCq", request);
 
-        System.out.println("Response ID: " +assistant.id());
+        System.out.println("Id: " +assistant.id());
         System.out.println("Object: " +assistant.object());
         System.out.println("Created at: " +assistant.createdAt());
         System.out.println("Model: " +assistant.model());

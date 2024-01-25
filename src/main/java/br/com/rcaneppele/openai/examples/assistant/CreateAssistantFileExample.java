@@ -15,7 +15,7 @@ public class CreateAssistantFileExample {
 
         var assistantFile = client.createAssistantFile("asst_id", request);
 
-        System.out.println("Response id: " +assistantFile.id());
+        System.out.println("Id: " +assistantFile.id());
         System.out.println("Object: " +assistantFile.object());
         System.out.println("Created at: " +assistantFile.createdAt());
         System.out.println("Assistant id: " +assistantFile.assistantId());

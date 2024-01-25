@@ -10,7 +10,7 @@ public class RetrieveMessageExample {
 
         var message = client.retrieveMessage("thread_id", "message_id");
 
-        System.out.println("id: " +message.id());
+        System.out.println("Id: " +message.id());
         System.out.println("Object: " +message.object());
         System.out.println("Created at: " +message.createdAt());
         System.out.println("Role: " +message.role());

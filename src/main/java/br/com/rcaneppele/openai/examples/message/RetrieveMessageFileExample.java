@@ -10,7 +10,7 @@ public class RetrieveMessageFileExample {
 
         var file = client.retrieveMessageFile("thread_id", "message_id", "file-id");
 
-        System.out.println("id: " +file.id());
+        System.out.println("Id: " +file.id());
         System.out.println("Object: " +file.object());
         System.out.println("Created at: " +file.createdAt());
         System.out.println("Message id: " +file.messageId());

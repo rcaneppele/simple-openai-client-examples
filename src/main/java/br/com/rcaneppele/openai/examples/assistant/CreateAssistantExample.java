@@ -20,7 +20,7 @@ public class CreateAssistantExample {
 
         var assistant = client.createAssistant(request);
 
-        System.out.println("Response ID: " +assistant.id());
+        System.out.println("Id: " +assistant.id());
         System.out.println("Object: " +assistant.object());
         System.out.println("Created at: " +assistant.createdAt());
         System.out.println("Model: " +assistant.model());

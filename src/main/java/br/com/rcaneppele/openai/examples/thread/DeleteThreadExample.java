@@ -10,7 +10,7 @@ public class DeleteThreadExample {
 
         var deletionStatus = client.deleteThread("thread_id");
 
-        System.out.println("id: " +deletionStatus.id());
+        System.out.println("Id: " +deletionStatus.id());
         System.out.println("Object: " +deletionStatus.object());
         System.out.println("Deleted: " +deletionStatus.deleted());
     }

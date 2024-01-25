@@ -12,7 +12,7 @@ public class RetrieveThreadExample {
         try {
             var thread = client.retrieveThread("thread_id");
 
-            System.out.println("id: " +thread.id());
+            System.out.println("Id: " +thread.id());
             System.out.println("Object: " +thread.object());
             System.out.println("Created at: " +thread.createdAt());
             System.out.println("Metadata: " +thread.metadata());

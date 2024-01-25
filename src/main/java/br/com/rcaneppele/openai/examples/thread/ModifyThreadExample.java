@@ -17,7 +17,7 @@ public class ModifyThreadExample {
 
         var thread = client.modifyThread("thread_id", request);
 
-        System.out.println("id: " +thread.id());
+        System.out.println("Id: " +thread.id());
         System.out.println("Object: " +thread.object());
         System.out.println("Created at: " +thread.createdAt());
         System.out.println("Metadata: " +thread.metadata());
