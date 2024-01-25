@@ -17,7 +17,7 @@ To utilize the library, your project needs to be built with Java 17 or a later v
 
 ### Chat Completion
 
-Explore examples of Chat Completion Requests within the [`Chat Completion Examples`](https://chat.openai.com/c/src/main/java/br/com/rcaneppele/openai/examples/chat/) package.
+Explore examples of Chat Completion Requests within the [`Chat Completion Examples`](src/main/java/br/com/rcaneppele/openai/examples/chat/) package.
 
 ### Assistant
 
