@@ -1,16 +1,27 @@
 package br.com.rcaneppele.openai.examples.assistant;
 
 import br.com.rcaneppele.openai.OpenAIClient;
+import br.com.rcaneppele.openai.common.request.builder.QueryParametersBuilder;
 
-public class RetrieveAssistantExample {
+public class ListAssistantsExample {
 
     public static void main(String[] args) {
         var apiKey = System.getenv("OPENAI_API_KEY");
         var client = new OpenAIClient(apiKey, 30);
 
-        try {
-            var assistant = client.retrieveAssistant("asst_xxxxxxxxxxxxxxxxxxxxxxxx");
+        // To list all:
+        //var listOfAssistants = client.listAssistants();
 
+        var filters = new QueryParametersBuilder().limit(3).ascOrder().build();
+        var listOfAssistants = client.listAssistants(filters);
+
+        System.out.println("Object: " +listOfAssistants.object());
+        System.out.println("Has more: " +listOfAssistants.hasMore());
+        System.out.println("First id: " +listOfAssistants.firstId());
+        System.out.println("Last id: " +listOfAssistants.lastId());
+
+        System.out.println("\n===== ASSISTANTS =====\n");
+        listOfAssistants.data().forEach(assistant -> {
             System.out.println("Response ID: " +assistant.id());
             System.out.println("Object: " +assistant.object());
             System.out.println("Created at: " +assistant.createdAt());
@@ -21,9 +32,8 @@ public class RetrieveAssistantExample {
             System.out.println("File ids: " +assistant.fileIds());
             System.out.println("Metadata: " +assistant.metadata());
             System.out.println("Tools: " +assistant.tools());
-        } catch (Exception e) {
-            System.out.println("Assistant not found with given id");
-        }
+            System.out.println("-------------------------");
+        });
     }
 
 }
