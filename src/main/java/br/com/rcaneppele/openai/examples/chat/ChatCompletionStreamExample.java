@@ -24,6 +24,10 @@ public class ChatCompletionStreamExample {
             if (message != null) {
                 System.out.print(message);
             }
+        }, error -> {
+            System.out.println("\n\nError during streaming: " +error.getMessage());
+        }, () -> {
+            System.out.println("\n\n=== Streaming completed ===");
         });
     }
 
