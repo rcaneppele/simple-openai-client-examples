@@ -1,24 +1,22 @@
 package br.com.rcaneppele.openai.examples.assistant;
 
 import br.com.rcaneppele.openai.OpenAIClient;
-import br.com.rcaneppele.openai.common.OpenAIModel;
-import br.com.rcaneppele.openai.endpoints.assistant.request.CreateAssistantRequest;
-import br.com.rcaneppele.openai.endpoints.assistant.request.builder.CreateAssistantRequestBuilder;
+import br.com.rcaneppele.openai.endpoints.assistant.request.ModifyAssistantRequest;
+import br.com.rcaneppele.openai.endpoints.assistant.request.builder.ModifyAssistantRequestBuilder;
 
-public class CreateAssistantExample {
+public class ModifyAssistantExample {
 
     public static void main(String[] args) {
         var apiKey = System.getenv("OPENAI_API_KEY");
         var client = new OpenAIClient(apiKey, 30);
 
-        var request = (CreateAssistantRequest) new CreateAssistantRequestBuilder()
-                .model(OpenAIModel.GPT_4_1106_PREVIEW)
-                .name("Math tutor")
-                .description("Math tutor assistant")
-                .instructions("You are a helpful math tutor assistant")
+        var request = (ModifyAssistantRequest) new ModifyAssistantRequestBuilder()
+                .name("Modified name")
+                .description("Modified description")
+                .instructions("Modified instructions")
                 .build();
 
-        var assistant = client.createAssistant(request);
+        var assistant = client.modifyAssistant("asst_vUT0OWmD2jrAgf4vTeZpWVCq", request);
 
         System.out.println("Response ID: " +assistant.id());
         System.out.println("Object: " +assistant.object());

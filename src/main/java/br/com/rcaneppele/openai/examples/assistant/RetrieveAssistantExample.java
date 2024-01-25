@@ -1,6 +1,7 @@
 package br.com.rcaneppele.openai.examples.assistant;
 
 import br.com.rcaneppele.openai.OpenAIClient;
+import br.com.rcaneppele.openai.error.exception.NotFoundException;
 
 public class RetrieveAssistantExample {
 
@@ -21,7 +22,7 @@ public class RetrieveAssistantExample {
             System.out.println("File ids: " +assistant.fileIds());
             System.out.println("Metadata: " +assistant.metadata());
             System.out.println("Tools: " +assistant.tools());
-        } catch (Exception e) {
+        } catch (NotFoundException e) {
             System.out.println("Assistant not found with given id");
         }
     }
